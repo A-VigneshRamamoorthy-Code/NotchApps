@@ -213,9 +213,24 @@
           <p class="text-lead">Both are native, featherweight and open-source — pick one, or run both together. Each is a single drag-to-install download.</p>
         </div>
 
-        <div class="apps">
+        <div class="apps-switch reveal">
+          <div class="appswitch" data-active="paw" data-group="demos" role="tablist" aria-label="Choose an app to preview">
+            <span class="appswitch-thumb" aria-hidden="true"></span>
+            <button type="button" class="appswitch-btn is-active" role="tab" id="demotab-paw" aria-selected="true" aria-controls="demo-paw" data-app="paw">
+              <span class="appswitch-ico" aria-hidden="true"><svg viewBox="0 0 64 64" fill="currentColor"><ellipse cx="20" cy="24" rx="5.4" ry="7.2" transform="rotate(-14 20 24)"/><ellipse cx="31" cy="19.5" rx="5.6" ry="7.6"/><ellipse cx="44" cy="24" rx="5.4" ry="7.2" transform="rotate(14 44 24)"/><path d="M32 31c-8.4 0-15 6-15 12.6 0 5.4 4.3 8 8.7 8 2.8 0 4.4-1.3 6.3-1.3s3.5 1.3 6.3 1.3c4.4 0 8.7-2.6 8.7-8C47 37 40.4 31 32 31Z"/></svg></span>
+              <span>NotchPaw</span>
+            </button>
+            <button type="button" class="appswitch-btn" role="tab" id="demotab-lock" aria-selected="false" aria-controls="demo-lock" data-app="lock" tabindex="-1">
+              <span class="appswitch-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4.5" y="10.5" width="15" height="10.5" rx="2.2"/><path d="M8 10.5V7a4 4 0 0 1 8 0v3.5"/></svg></span>
+              <span>NotchLock</span>
+            </button>
+          </div>
+          <p class="switch-hint">Previewing <strong data-switch-name>NotchPaw</strong> — tap the other to compare</p>
+        </div>
+
+        <div class="apps app-panels" data-appswitch-group="demos">
           <!-- NotchPaw card -->
-          <article class="card app-card reveal" id="paw-card">
+          <article class="card app-card app-panel is-active reveal" data-app-panel="paw" id="demo-paw" role="tabpanel" aria-labelledby="demotab-paw">
             <figure class="window app-media">
               <div class="window-bar">
                 <span class="dots" aria-hidden="true"><i></i><i></i><i></i></span>
@@ -253,7 +268,7 @@
           </article>
 
           <!-- NotchLock card -->
-          <article class="card app-card theme-amber reveal d1" id="lock-card">
+          <article class="card app-card theme-amber app-panel reveal" data-app-panel="lock" id="demo-lock" role="tabpanel" aria-labelledby="demotab-lock">
             <figure class="window app-media">
               <div class="window-bar">
                 <span class="dots" aria-hidden="true"><i></i><i></i><i></i></span>
@@ -301,7 +316,7 @@
             <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M4 21v-7M4 10V3M12 21v-9M12 8V3M20 21v-5M20 12V3M1 14h6M9 8h6M17 16h6"/></svg>
             A closer look
           </span>
-          <div class="appswitch" data-active="paw" role="tablist" aria-label="Choose an app to view its details">
+          <div class="appswitch" data-active="paw" data-group="details" data-theme-amber="on" role="tablist" aria-label="Choose an app to view its details">
             <span class="appswitch-thumb" aria-hidden="true"></span>
             <button type="button" class="appswitch-btn is-active" role="tab" id="tab-paw" aria-selected="true" aria-controls="panel-paw" data-app="paw">
               <span class="appswitch-ico" aria-hidden="true"><svg viewBox="0 0 64 64" fill="currentColor"><ellipse cx="20" cy="24" rx="5.4" ry="7.2" transform="rotate(-14 20 24)"/><ellipse cx="31" cy="19.5" rx="5.6" ry="7.6"/><ellipse cx="44" cy="24" rx="5.4" ry="7.2" transform="rotate(14 44 24)"/><path d="M32 31c-8.4 0-15 6-15 12.6 0 5.4 4.3 8 8.7 8 2.8 0 4.4-1.3 6.3-1.3s3.5 1.3 6.3 1.3c4.4 0 8.7-2.6 8.7-8C47 37 40.4 31 32 31Z"/></svg></span>
@@ -315,8 +330,8 @@
           <p class="switch-hint">Showing <strong data-switch-name>NotchPaw</strong> — tap the other to compare</p>
         </div>
 
-        <div class="app-panels">
-        <div class="app-panel is-active" role="tabpanel" id="panel-paw" aria-labelledby="tab-paw">
+        <div class="app-panels" data-appswitch-group="details">
+        <div class="app-panel is-active" role="tabpanel" id="panel-paw" aria-labelledby="tab-paw" data-app-panel="paw">
         <div class="section-head reveal">
           <span class="section-label">
             <svg viewBox="0 0 24 24"><ellipse cx="6" cy="12" rx="1.8" ry="2.3"/><ellipse cx="10" cy="8" rx="1.9" ry="2.5"/><ellipse cx="14" cy="8" rx="1.9" ry="2.5"/><ellipse cx="18" cy="12" rx="1.8" ry="2.3"/><path d="M12 12.5c-2.9 0-5.2 2-5.2 4.3 0 1.7 1.4 2.6 3 2.6.9 0 1.5-.4 2.2-.4s1.3.4 2.2.4c1.6 0 3-.9 3-2.6 0-2.3-2.3-4.3-5.2-4.3z"/></svg>
@@ -396,7 +411,7 @@
         </div>
         </div><!-- /panel-paw -->
 
-        <div class="app-panel" role="tabpanel" id="panel-lock" aria-labelledby="tab-lock" tabindex="0">
+        <div class="app-panel" role="tabpanel" id="panel-lock" aria-labelledby="tab-lock" data-app-panel="lock" tabindex="0">
         <span id="notchlock" class="tab-anchor" aria-hidden="true"></span>
         <div class="section-head reveal">
           <span class="section-label">
@@ -725,70 +740,90 @@
       }).catch(function () { /* keep cached values or stay hidden */ });
     })();
 
-    // App details slider tabs — NotchPaw shown by default; switch to NotchLock.
+    // App slider tabs — NotchPaw shown by default. Both the "Meet the apps"
+    // demos and the "A closer look" details use synced switchers, so choosing
+    // an app in one updates both. Without JS, all panels stay visible (SEO-safe).
     (function () {
-      var sw = document.querySelector('.appswitch');
-      var section = document.querySelector('.details');
-      if (!sw || !section) return;
-      var btns = Array.prototype.slice.call(sw.querySelectorAll('.appswitch-btn'));
-      var panels = { paw: document.getElementById('panel-paw'), lock: document.getElementById('panel-lock') };
-      var nameEl = document.querySelector('[data-switch-name]');
+      var switches = Array.prototype.slice.call(document.querySelectorAll('.appswitch'));
+      if (!switches.length) return;
       var NAMES = { paw: 'NotchPaw', lock: 'NotchLock' };
 
-      // Enables single-panel display; without JS both panels stay visible (SEO-safe).
-      section.classList.add('tabs-ready');
+      var groups = switches.map(function (sw) {
+        var group = sw.getAttribute('data-group');
+        var container = document.querySelector('[data-appswitch-group="' + group + '"]');
+        var switchWrap = sw.parentNode;
+        if (container) container.classList.add('tabs-ready');
+        return {
+          sw: sw,
+          section: sw.closest('section'),
+          themeAmber: sw.getAttribute('data-theme-amber') === 'on',
+          btns: Array.prototype.slice.call(sw.querySelectorAll('.appswitch-btn')),
+          panels: container ? {
+            paw: container.querySelector('[data-app-panel="paw"]'),
+            lock: container.querySelector('[data-app-panel="lock"]')
+          } : {},
+          nameEl: switchWrap ? switchWrap.querySelector('[data-switch-name]') : null
+        };
+      });
 
-      function activate(app, focusTab) {
-        if (!panels[app]) return;
-        sw.setAttribute('data-active', app);
-        section.classList.toggle('theme-amber', app === 'lock');
-        btns.forEach(function (b) {
-          var on = b.getAttribute('data-app') === app;
-          b.classList.toggle('is-active', on);
-          b.setAttribute('aria-selected', String(on));
-          b.tabIndex = on ? 0 : -1;
+      var current = 'paw';
+
+      function apply(app, focusSw) {
+        if (app !== 'paw' && app !== 'lock') return;
+        current = app;
+        groups.forEach(function (g) {
+          g.sw.setAttribute('data-active', app);
+          if (g.themeAmber && g.section) g.section.classList.toggle('theme-amber', app === 'lock');
+          g.btns.forEach(function (b) {
+            var on = b.getAttribute('data-app') === app;
+            b.classList.toggle('is-active', on);
+            b.setAttribute('aria-selected', String(on));
+            b.tabIndex = on ? 0 : -1;
+          });
+          Object.keys(g.panels).forEach(function (k) {
+            var p = g.panels[k]; if (!p) return;
+            var on = k === app;
+            p.classList.toggle('is-active', on);
+            if (on) { p.querySelectorAll('.reveal').forEach(function (el) { el.classList.add('is-visible'); }); }
+          });
+          if (g.nameEl) g.nameEl.textContent = NAMES[app];
         });
-        Object.keys(panels).forEach(function (k) {
-          var on = k === app;
-          panels[k].classList.toggle('is-active', on);
-          if (on) { panels[k].querySelectorAll('.reveal').forEach(function (el) { el.classList.add('is-visible'); }); }
-        });
-        if (nameEl) nameEl.textContent = NAMES[app];
-        if (focusTab) {
-          var t = btns.filter(function (b) { return b.getAttribute('data-app') === app; })[0];
+        if (focusSw) {
+          var t = focusSw.querySelector('.appswitch-btn[data-app="' + app + '"]');
           if (t) t.focus();
         }
       }
 
-      btns.forEach(function (b) {
-        b.addEventListener('click', function () { activate(b.getAttribute('data-app')); });
+      groups.forEach(function (g) {
+        g.btns.forEach(function (b) {
+          b.addEventListener('click', function () { apply(b.getAttribute('data-app')); });
+        });
+        g.sw.addEventListener('keydown', function (e) {
+          if (e.key !== 'ArrowLeft' && e.key !== 'ArrowRight') return;
+          e.preventDefault();
+          apply(current === 'paw' ? 'lock' : 'paw', g.sw);
+        });
       });
 
-      // Left/Right arrows toggle the tabs.
-      sw.addEventListener('keydown', function (e) {
-        if (e.key !== 'ArrowLeft' && e.key !== 'ArrowRight') return;
-        e.preventDefault();
-        activate(sw.getAttribute('data-active') === 'paw' ? 'lock' : 'paw', true);
-      });
-
-      // Deep-links & nav: #notchpaw / #notchlock switch the tab (and scroll to it).
+      // Deep-links & nav: #notchpaw / #notchlock switch the app (and scroll to details).
       function appFromHash(h) { return h === '#notchlock' ? 'lock' : (h === '#notchpaw' ? 'paw' : null); }
       document.querySelectorAll('a[href="#notchpaw"], a[href="#notchlock"]').forEach(function (a) {
         a.addEventListener('click', function (e) {
           var app = appFromHash(a.getAttribute('href'));
           if (!app) return;
           e.preventDefault();
-          activate(app);
-          section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          apply(app);
+          var target = document.querySelector(a.getAttribute('href'));
+          if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
           try { history.replaceState(null, '', a.getAttribute('href')); } catch (err) {}
         });
       });
       window.addEventListener('hashchange', function () {
         var app = appFromHash(location.hash);
-        if (app) activate(app);
+        if (app) apply(app);
       });
       var initial = appFromHash(location.hash);
-      if (initial) activate(initial);
+      if (initial) apply(initial);
     })();
 
     // Scroll reveal (progressive enhancement)
