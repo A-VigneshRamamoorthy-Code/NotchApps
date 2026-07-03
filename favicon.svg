@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <rect width="64" height="64" rx="14" fill="#6C47FF"/>
+  <!-- notch bar -->
+  <rect x="20" y="0" width="24" height="9" rx="0 0 5 5" fill="#0D0D12"/>
+  <path d="M20 0h24v4a5 5 0 0 1-5 5H25a5 5 0 0 1-5-5Z" fill="#0D0D12"/>
+  <!-- paw peeking from the notch -->
+  <g fill="#FFFFFF" transform="translate(0,4)">
+    <ellipse cx="22" cy="26" rx="4.4" ry="5.9" transform="rotate(-14 22 26)"/>
+    <ellipse cx="32" cy="22" rx="4.6" ry="6.2"/>
+    <ellipse cx="42" cy="26" rx="4.4" ry="5.9" transform="rotate(14 42 26)"/>
+    <path d="M32 32c-6.9 0-12.3 4.9-12.3 10.3 0 4.4 3.5 6.6 7.1 6.6 2.3 0 3.6-1.1 5.2-1.1s2.9 1.1 5.2 1.1c3.6 0 7.1-2.1 7.1-6.6C44.3 36.9 38.9 32 32 32Z"/>
+  </g>
+</svg>
