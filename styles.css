@@ -981,12 +981,10 @@ a { color: inherit; text-decoration: none; }
 
 /* ---------- App details: slider tab switcher ---------------------------- */
 .details { scroll-margin-top: 76px; }
-.details-switch,
-.apps-switch {
+.details-switch {
   display: flex; flex-direction: column; align-items: center;
   gap: 12px; margin-bottom: 48px;
 }
-.apps-switch { margin-top: 4px; margin-bottom: 40px; }
 .details-switch .section-label { margin-bottom: 0; }
 
 .appswitch {
@@ -1033,18 +1031,14 @@ a { color: inherit; text-decoration: none; }
 .app-panels { position: relative; }
 .tab-anchor { display: block; height: 0; }
 .app-panel + .app-panel { margin-top: 32px; padding-top: 32px; border-top: 1px solid var(--border-default); }
-.app-panels.tabs-ready .app-panel { display: none; }
-.app-panels.tabs-ready .app-panel.is-active { display: block; animation: panel-in 0.42s cubic-bezier(0.22, 1, 0.36, 1); }
-.app-panels.tabs-ready .app-panel + .app-panel { margin-top: 0; padding-top: 0; border-top: 0; }
+.details.tabs-ready .app-panel { display: none; }
+.details.tabs-ready .app-panel.is-active { display: block; animation: panel-in 0.42s cubic-bezier(0.22, 1, 0.36, 1); }
+.details.tabs-ready .app-panel + .app-panel { margin-top: 0; padding-top: 0; border-top: 0; }
 @keyframes panel-in { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: none; } }
-
-/* Demos ("Meet the apps") as a single switchable card */
-.apps.app-panels.tabs-ready { display: block; }
-.apps.app-panels.tabs-ready .app-panel.is-active { max-width: 660px; margin-inline: auto; }
 
 @media (prefers-reduced-motion: reduce) {
   .appswitch-thumb { transition: none; }
-  .app-panels.tabs-ready .app-panel.is-active { animation: none; }
+  .details.tabs-ready .app-panel.is-active { animation: none; }
 }
 @media (max-width: 440px) {
   .appswitch { width: 100%; }
