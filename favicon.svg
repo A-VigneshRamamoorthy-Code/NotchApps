@@ -1,7 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
   <rect width="64" height="64" rx="14" fill="#6C47FF"/>
-  <!-- notch bar -->
-  <rect x="20" y="0" width="24" height="9" rx="0 0 5 5" fill="#0D0D12"/>
+  <!-- notch bar (rounded-bottom cutout) -->
   <path d="M20 0h24v4a5 5 0 0 1-5 5H25a5 5 0 0 1-5-5Z" fill="#0D0D12"/>
   <!-- paw peeking from the notch -->
   <g fill="#FFFFFF" transform="translate(0,4)">
